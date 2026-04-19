@@ -10,19 +10,19 @@
 <body>
 
 <header class="navbar">
-    <h1 class="logo">
-        <span class="logo-light">O que a</span>
-        <span class="logo-ia">IA</span>
-        <span class="logo-light">não faz</span>
-    </h1>
+  <h1 class="logo">
+    <span class="logo-light">O que a</span>
+    <span class="logo-ia">IA</span>
+    <span class="logo-light">não faz</span>
+  </h1>
 
   <div class="menu-toggle" id="menu-toggle">☰</div>
 
   <nav id="nav">
-    <a href="#">Sobre</a>
-    <a href="#">Experiências</a>
-    <a href="#">Cases</a>
-    <a href="#" class="cta">Criar Evento</a>
+    <a href="#about">Sobre</a>
+    <a href="#portfolio">Experiências</a>
+    <a href="#team">Equipe</a>
+    <a href="#contato" class="cta">Criar Evento</a>
   </nav>
 </header>
 
@@ -39,87 +39,16 @@
     </p>
 
     <div class="hero-buttons">
-      <button class="btn-primary">Criar Evento</button>
-      <button class="btn-secondary">Ver experiências</button>
+      <button class="btn-primary" onclick="location.href='#contato'">Criar Evento</button>
+      <button class="btn-secondary" onclick="location.href='#portfolio'">Ver experiências</button>
     </div>
   </div>
-
- <div class="hero-vine">
-  <svg viewBox="0 0 600 400" class="vine-svg">
-
-    <!-- Vinha principal -->
-    <path d="M50 300 
-             C150 200, 250 350, 350 250
-             S500 150, 550 220"
-          stroke="#c85c00"
-          stroke-width="8"
-          fill="none"
-          stroke-linecap="round"/>
-
-    <!-- Ramo -->
-    <path d="M380 260 C400 200, 450 180, 480 140"
-          stroke="#c85c00"
-          stroke-width="5"
-          fill="none"/>
-
-    <!-- FOLHAS -->
-    <g fill="#4caf6d">
-      <ellipse cx="170" cy="220" rx="18" ry="9" transform="rotate(25 170 220)"/>
-      <ellipse cx="300" cy="260" rx="16" ry="8" transform="rotate(-20 300 260)"/>
-      <ellipse cx="420" cy="200" rx="18" ry="9" transform="rotate(30 420 200)"/>
-      <ellipse cx="500" cy="180" rx="14" ry="7" transform="rotate(-25 500 180)"/>
-      
-    </g>
-
-    <!-- FLORES (agora PRESAS na vinha) -->
-
-    <!-- flor 1 -->
-    <g transform="translate(180,230)">
-      <circle r="20" fill="#ff7a00"/>
-      <circle r="10" fill="#ffe0a3"/>
-      <g fill="#ffa75a">
-        <circle cx="0" cy="-30" r="10"/>
-        <circle cx="0" cy="30" r="10"/>
-        <circle cx="30" cy="0" r="10"/>
-        <circle cx="-30" cy="0" r="10"/>
-        <circle cx="22" cy="22" r="10"/>
-        <circle cx="-22" cy="22" r="10"/>
-        <circle cx="22" cy="-22" r="10"/>
-        <circle cx="-22" cy="-22" r="10"/>
-      </g>
-    </g>
-
-    <!-- flor 2 -->
-    <g transform="translate(420,210)">
-      <circle r="16" fill="#ff4d6d"/>
-      <circle r="8" fill="#ffe0a3"/>
-      <g fill="#ff85a1">
-        <circle cx="0" cy="-24" r="8"/>
-        <circle cx="0" cy="24" r="8"/>
-        <circle cx="24" cy="0" r="8"/>
-        <circle cx="-24" cy="0" r="8"/>
-      </g>
-    </g>
-
-    <!-- flor 3 -->
-    <g transform="translate(320,280)">
-      <circle r="14" fill="#ff9f1c"/>
-      <circle r="6" fill="#fff3c4"/>
-      <g fill="#ffc971">
-        <circle cx="0" cy="-20" r="7"/>
-        <circle cx="0" cy="20" r="7"/>
-        <circle cx="20" cy="0" r="7"/>
-        <circle cx="-20" cy="0" r="7"/>
-      </g>
-    </g>
-
-  </svg>
-</div>
 
   <div class="hero-visual"></div>
 </section>
 
-<section class="about">
+<!-- SOBRE -->
+<section class="about" id="about">
   <div class="about-box">
     <h2>Sobre a marca</h2>
     <p>
@@ -134,8 +63,38 @@
   </div>
 </section>
 
-<!-- NOVA SEÇÃO DE PORTFÓLIO -->
-<section class="portfolio">
+<!-- SÓCIAS -->
+<section class="founders" id="socias">
+  <div class="about-box">
+    <h2>Sócias</h2>
+
+    <p>
+      “O que a IA não faz” nasceu da união de três amigas que, antes de tudo, se respeitam, se apoiam e se divertem juntas.
+    </p>
+
+    <h3>Débora Nóbrega</h3>
+    <p>
+      Sócia de uma empresa de TI há mais de 20 anos. Formada em Fotografia e Literatura, é designer criativa e multifacetada. Apaixonada por plantas, estética e ideias com alma.
+    </p>
+
+    <h3>Paula Meninel</h3>
+    <p>
+      Atua com eventos corporativos e gestão de baladas em São Paulo. Com mais de 10 anos de experiência, é prática, inovadora e intensa. Faixa preta de jiu-jitsu, traz força e execução.
+    </p>
+
+    <h3>Roberta Meninel</h3>
+    <p>
+      Especialista financeira, responsável por organização e equilíbrio. Intuitiva e empática, garante que tudo funcione com consistência e segurança.
+    </p>
+
+    <p>
+      Juntas, somos emoção, intuição e parceria — o que nenhuma IA consegue reproduzir.
+    </p>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section class="portfolio" id="portfolio">
   <h2>Experiências realizadas</h2>
 
   <div class="portfolio-grid">
@@ -151,6 +110,7 @@
   </div>
 </section>
 
+<!-- SERVIÇOS -->
 <section class="services">
   <div class="card">
     <h3>Eventos corporativos</h3>
@@ -166,6 +126,42 @@
     <h3>Experiências premium</h3>
     <p>Projetos exclusivos e personalizados.</p>
   </div>
+</section>
+
+<section class="group-section">
+
+  <!-- EQUIPE -->
+  <section class="team" id="team">
+    <div class="about-box">
+      <h2>Nossa Equipe</h2>
+
+      <p>
+        Nossa equipe é o coração de tudo o que fazemos. Profissionais experientes e apaixonados que transformam ideias em experiências reais.
+      </p>
+
+      <p>
+        Brenda, Claudinha, Ana Paula, Digão e Michelle formam nosso time de confiança — executando cada detalhe com excelência.
+      </p>
+
+      <p>
+        E o Branco garante que tudo chegue com segurança, no tempo certo.
+      </p>
+
+      <p>
+        Mais do que uma equipe, somos um grupo que acredita no poder da criação conjunta.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact" id="contato">
+    <div class="about-box">
+      <h2>Criar Evento</h2>
+      <p>Entre em contato para desenvolver sua experiência personalizada.</p>
+      <p>contato@oqueiaonaofaz.com</p>
+    </div>
+  </section>
+
 </section>
 
 <footer class="footer">
