@@ -25,3 +25,10 @@ const nav = document.getElementById("nav");
 toggle.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
+
+<script>
+  const track = document.querySelector('.carousel-track');
+
+  // duplica imagens para loop infinito suave
+  track.innerHTML += track.innerHTML;
+</script>
