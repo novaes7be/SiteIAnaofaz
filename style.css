@@ -670,6 +670,7 @@ button img {
     height: 650px;
   }
 }
+
 /* =========================
    DESKTOP NOTEBOOK (até 1440px)
 ========================= */
@@ -696,24 +697,14 @@ button img {
   }
 }
 
-
 /* =========================
-   DESKTOP MENOR / TABLET HORIZONTAL (1024px)
+   TABLET / 1024px
 ========================= */
 @media (max-width: 1024px) {
 
-  /* HERO vira estrutura mais compacta */
   .hero {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "content"
-      "flower"
-      "visual";
-
     padding: 140px 40px 70px 40px;
     text-align: center;
-
     gap: 30px;
   }
 
@@ -729,9 +720,8 @@ button img {
     font-size: 1.1rem;
   }
 
-  /* FLOR vira elemento central controlado */
   .hero::after {
-   display: none;
+    display: none;
   }
 
   .hero-visual {
@@ -739,39 +729,33 @@ button img {
     height: 360px;
     justify-content: center;
   }
-  /* CONTACT BUTTONS - TABLET */
-.contact-buttons {
-  justify-content: center;
+
+  .contact-buttons {
+    justify-content: center;
+  }
+
+  .contact-buttons button {
+    align-items: center;
+    text-align: center;
+  }
 }
 
-.contact-buttons button {
-  align-items: center;
-  text-align: center;
-}
-}
+/* =========================
+   MOBILE REAL (até 800px - LG K52 incluso)
+========================= */
+@media (max-width: 800px) {
 
-
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
-/* MOBILE MENU */
-@media (max-width: 768px) {
   nav {
     position: absolute;
     top: 70px;
     right: 0;
     width: 100%;
-    
     background: rgba(255,255,255,0.95);
     backdrop-filter: blur(12px);
 
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
     padding: 20px 0;
 
     display: none;
@@ -786,35 +770,40 @@ nav {
     font-size: 18px;
   }
 
-  .hero-visual{
+  .hero-visual {
     display: none;
   }
 
-    .hero::after {
+  .hero::after {
     display: none;
   }
- @media (max-width: 768px) {
 
+  .carousel-track {
+    height: 400px;
+  }
+
+  /* 🔥 BOTÕES CORRIGIDOS */
   .contact-buttons {
+    display: flex;
     flex-direction: column;
-    gap: 20px; /* 👈 espaçamento real entre botões */
-    align-items: stretch;
+    gap: 20px; /* 👈 espaçamento garantido */
+    width: 100%;
   }
 
   .contact-buttons button {
-    margin-left: 0 !important; /* 👈 remove o problema */
     width: 100%;
+    margin-left: 0 !important;
   }
-}
 
-
-  .carousel-track{
-    height: 400px;
+  .btn-contact-primary,
+  .btn-contact-secondary,
+  .btn-contact-tertiary {
+    margin-left: 0 !important;
   }
 }
 
 /* =========================
-   MOBILE (480px)
+   MOBILE PEQUENO (480px)
 ========================= */
 @media (max-width: 480px) {
 
@@ -830,10 +819,10 @@ nav {
     display: none;
   }
 
-  /* remove flor pra não poluir */
   .hero::after {
     display: none;
   }
+
   .btn-primary {
     padding-bottom: 20px;
   }
@@ -842,14 +831,13 @@ nav {
   .btn-secondary {
     max-width: 100%;
   }
-  /* CONTACT BUTTONS - MOBILE PEQUENO */
-.contact-buttons button {
-  max-width: 100%;
-  padding: 1.1rem 1.2rem;
-  margin-left: none;
-}
 
-.contact-buttons span {
-  font-size: 12px;
-}
+  .contact-buttons button {
+    max-width: 100%;
+    padding: 1.1rem 1.2rem;
+  }
+
+  .contact-buttons span {
+    font-size: 12px;
+  }
 }
