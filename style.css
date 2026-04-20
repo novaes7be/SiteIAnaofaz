@@ -339,7 +339,6 @@ nav a {
   padding: 3rem;
   border-radius: 20px;
   max-width: 1200px;
-  max-height: 2000px;
 }
 
 /* títulos seguem padrão existente */
@@ -818,6 +817,9 @@ nav {
   /* remove flor pra não poluir */
   .hero::after {
     display: none;
+  }
+  .btn-primar {
+    padding-bottom: 20px;
   }
 
   .btn-primary,
