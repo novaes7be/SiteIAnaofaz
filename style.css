@@ -339,7 +339,7 @@ nav a {
   padding: 3rem;
   border-radius: 20px;
   max-width: 1200px;
-  max-height: 1600px;
+  max-height: 2000px;
 }
 
 /* títulos seguem padrão existente */
@@ -730,21 +730,13 @@ button img {
 
   /* FLOR vira elemento central controlado */
   .hero::after {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-
-    width: 520px;
-    height: 300px;
-
-    margin: 0 auto;
-    opacity: 0.5;
+   display: none;
   }
 
   .hero-visual {
     width: 360px;
     height: 360px;
+    justify-content: center;
   }
   /* CONTACT BUTTONS - TABLET */
 .contact-buttons {
