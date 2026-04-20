@@ -339,6 +339,7 @@ nav a {
   padding: 3rem;
   border-radius: 20px;
   max-width: 1200px;
+  height: auto;
 }
 
 /* títulos seguem padrão existente */
@@ -364,6 +365,8 @@ nav a {
   font-size: 1.1rem;
   margin-bottom: 1.2rem;
   opacity: 0.9;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* frase final destaque */
@@ -791,6 +794,20 @@ nav {
     .hero::after {
     display: none;
   }
+ @media (max-width: 768px) {
+
+  .contact-buttons {
+    flex-direction: column;
+    gap: 20px; /* 👈 espaçamento real entre botões */
+    align-items: stretch;
+  }
+
+  .contact-buttons button {
+    margin-left: 0 !important; /* 👈 remove o problema */
+    width: 100%;
+  }
+}
+
 
   .carousel-track{
     height: 400px;
@@ -818,7 +835,7 @@ nav {
   .hero::after {
     display: none;
   }
-  .btn-primar {
+  .btn-primary {
     padding-bottom: 20px;
   }
 
